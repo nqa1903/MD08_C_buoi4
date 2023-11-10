@@ -21,11 +21,19 @@ int main(){
 			printf("co 30 ngay");
 			break;
 		case 2 :
-			if(year % 2 ==0){
-				printf("co 29 ngay");
-			}else{
-				printf("co 28 ngay");
-			}
+			if(year % 4 ==0){
+				if(year % 100 == 0){
+					if(year % 400 == 0){
+						printf("co 29 ngay");
+					}else{
+						printf("co 28 ngay");
+					}
+				}else{
+					printf("co 29 ngay");
+				}
+				}else{
+					printf("co 28 ngay");
+				}
 			break;
 		default:
 			printf("khong hop le");
